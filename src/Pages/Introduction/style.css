@@ -1,0 +1,19 @@
+.center-div{
+    display: flex;
+    justify-content: center;
+    min-height: 30rem;
+}
+
+.center-div > .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+    .center-div >.content{
+        font-size: small;
+    }    
+}

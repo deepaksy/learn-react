@@ -1,0 +1,67 @@
+.navbar-container{
+    position: sticky;
+    top:0;
+    z-index: 50;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    align-items: center;
+    padding: 0rem 1.5rem;
+    transition: all .2s ease-in-out;
+}
+
+#react-logo{
+    width: 6rem;
+    animation-name: animate-logo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+}
+
+
+
+.navbar-container.sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 2px 0px 9px var(--nav-shadow), inset 0px -0.2px 0px var(--nav-border);
+
+}
+
+.hide{
+    display: none;
+}
+
+/* Keyframes */
+
+@keyframes animate-logo {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width:600px){
+    .navbar{
+        display: flex;
+        align-items: center;
+        min-height: 2rem;
+        animation: none;
+    }
+
+    .navbar-container{
+        padding: 0rem 0rem;
+    }
+
+    #react-logo{
+        width: 4rem;
+    }
+}
