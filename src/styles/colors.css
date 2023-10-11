@@ -1,7 +1,15 @@
-:root{
+[theme='dark']{
     --backgroundColor: #283041;
     --textColor: aliceblue;
     --nav-border: rgba(192, 192, 192, 0.651);
     --nav-shadow: #1e1e1e28;
+    /* --nav-shadow: #1e1e1e3b */
+}
+
+[theme='light']{
+    --backgroundColor: aliceblue;
+    --textColor: #283041;
+    --nav-border: #1e1e1e28;
+    --nav-shadow: rgba(213, 211, 211, 0.441);;
     /* --nav-shadow: #1e1e1e3b */
 }

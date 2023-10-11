@@ -1,11 +1,13 @@
 import './style.css'
 import react_logo from '../../assets/logo.svg'
 import { useLayoutEffect, useMemo, useRef } from 'react'
+import Button from '../Button'
+import useTheme from '../../services/useTheme'
 
 const Navbar = () => {
   const navRef = useRef(null)
   const navLinksRef = useRef(null)
-
+  const {isDark,toggleTheme} = useTheme()
 
   const setScreen = ()=>{
     if(navLinksRef.current!=null){
@@ -70,6 +72,9 @@ const Navbar = () => {
         </div>
         <div ref={navLinksRef}>
           links
+        </div>
+        <div>
+        <Button onclick={toggleTheme} text={isDark?'light':'dark'}/>
         </div>
         </div>
     </nav>

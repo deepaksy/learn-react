@@ -1,12 +1,10 @@
 import useTheme from '../../services/useTheme'
 import './style.css'
 
-const Button = ({text}) => {
-  const {isDark,toggleTheme} = useTheme()
-  console.log(isDark)
+const Button = ({text,onclick}) => {
   return (
-    <button onClick={()=>toggleTheme()}>
-      {isDark?'dark':'light'}
+    <button onClick={()=>onclick()}>
+      {text}
     </button>
   )
 }
