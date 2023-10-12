@@ -1,6 +1,6 @@
 import './App.css';
 import Introduction from './Pages/Introduction';
-import Button from './components/Button';
+// import Button from './components/Button';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
     <Navbar/>
     <Introduction/>
-    <Button text={'hello'}/>
+    {/* <Button text={'hello'}/> */}
     <div style={{minHeight:'100vh'}}>
       Hello
     </div>
