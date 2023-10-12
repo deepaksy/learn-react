@@ -1,0 +1,39 @@
+.button{
+    border: none;
+    /* border: thin solid pink; */
+    background: none;
+    padding: 1rem 1.3rem;
+    color: var(--textColor);
+    border-radius: 2rem;
+}
+
+@media (hover: hover){
+    .button:hover{
+        /* border: thin solid pink; */
+        background-color: var(--nav-links);
+        filter: brightness(98%);
+        color: var(--textColor);
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .button{
+        border: none;
+        /* border: thin solid pink; */
+        background: none;
+        padding: .7rem 1rem;
+        color: var(--textColor);
+        border-radius: 2rem;
+        margin: 0rem .5rem;
+    }
+    @media (hover: hover){
+        .button:hover{
+            /* border: thin solid pink; */
+            background-color: var(--nav-links);
+            filter: brightness(98%);
+            color: var(--textColor);
+            cursor: pointer;
+        }
+    }
+}
