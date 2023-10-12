@@ -3,12 +3,10 @@ import react_logo from '../../assets/logo.svg'
 import { useLayoutEffect, useMemo, useRef } from 'react'
 import useTheme from '../../services/useTheme'
 import ThemeButton from '../ThemeButton'
-import SideBar from '../SideBar'
 
 const Navbar = () => {
   const navRef = useRef(null)
   const navLinksRef = useRef(null)
-  const sidebarRef = useRef()
   const {isDark,toggleTheme} = useTheme()
 
   const setScreen = ()=>{
@@ -44,22 +42,28 @@ const Navbar = () => {
     })
   },[navRef])
 
-  // handle side nav-state
-  const handleSideNav = () =>{
-    if(sidebarRef!=null){
-      if(sidebarRef.current.classList.contains('show')){
-          sidebarRef.current.classList.remove('show');
-      }else{
-          sidebarRef.current.classList.add('show');
-      }
-  }
-  }
+  // window.addEventListener('scroll',()=>{
+  //   if(navRef.current!=null){
+  //     if(window.scrollY>navRef.current.offsetTop){
+  //       navRef.current.classList.add('sticky')
+  //       navRef2.current.classList.add('sticky')
+        
+  //     }
+  //     else{
+  //       navRef.current.classList.remove('sticky')
+  //       navRef2.current.classList.remove('sticky')
+  //     }
+  //   }
+  // })
+
+  // setInterval(() => {
+  //   console.log(window.scrollY)
+  //   console.log("Nav: "+navRef.current.offsetTop)
+  // }, 100);
 
   return (
-      <>
     <nav ref={navRef} className={`navbar-container`}>
         <div  className='navbar'>
-          <button onClick={()=>handleSideNav()}>click</button>
             <img id='react-logo' alt='react-logo' src={react_logo} width={70}/>
             {/**/}
             <div className='navbar-right'>
@@ -75,8 +79,6 @@ const Navbar = () => {
             </div>
         </div>
     </nav>
-    <SideBar ref={sidebarRef}></SideBar>
-    </>
   )
 }
 
