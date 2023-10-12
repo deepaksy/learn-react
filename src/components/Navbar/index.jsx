@@ -4,6 +4,7 @@ import { useLayoutEffect, useMemo, useRef } from 'react'
 import useTheme from '../../services/useTheme'
 import ThemeButton from '../ThemeButton'
 import SideBar from '../SideBar'
+import Button from '../Button'
 
 const Navbar = () => {
   const navRef = useRef(null)
@@ -59,7 +60,7 @@ const Navbar = () => {
       <>
     <nav ref={navRef} className={`navbar-container`}>
         <div  className='navbar'>
-          <button onClick={()=>handleSideNav()}>click</button>
+          <Button onclick={()=>handleSideNav()} text={'click'} />
             <img id='react-logo' alt='react-logo' src={react_logo} width={70}/>
             {/**/}
             <div className='navbar-right'>

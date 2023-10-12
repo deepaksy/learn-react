@@ -1,16 +1,23 @@
 .sidebar{
-    display: block;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: pink;
     width: 0px;
-    transition: width .1s;
+    visibility: hidden;
+    transition: width .2s,visibility .2s;
+}
+
+.contents{
+    display: block;
 }
 
 .sidebar.show{
+    display: block;
+    visibility: visible;
     width: 50%;
+    /* transition: visibility 1s; */
 }
 
 .sidebar::before{
@@ -22,7 +29,7 @@
 
 @media only screen and (max-width:600px){
     .sidebar{
-        width: max-content;
-        transition: width 3s;
+        width: 0px;
+        transition: width .2s,visibility .2s;
     }
 }
