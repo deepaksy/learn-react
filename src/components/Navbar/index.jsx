@@ -1,8 +1,8 @@
 import './style.css'
 import react_logo from '../../assets/logo.svg'
 import { useLayoutEffect, useMemo, useRef } from 'react'
-import Button from '../Button'
 import useTheme from '../../services/useTheme'
+import ThemeButton from '../ThemeButton'
 
 const Navbar = () => {
   const navRef = useRef(null)
@@ -67,15 +67,17 @@ const Navbar = () => {
         <div  className='navbar'>
             <img id='react-logo' alt='react-logo' src={react_logo} width={70}/>
             {/**/}
-            <div>
+            <div className='navbar-right'>
+              <div>
           searchbar
         </div>
         <div ref={navLinksRef}>
           links
         </div>
         <div>
-        <Button onclick={toggleTheme} text={isDark?'light':'dark'}/>
+        <ThemeButton onclick={toggleTheme} text={isDark?'light':'dark'}/>
         </div>
+            </div>
         </div>
     </nav>
   )

@@ -1,4 +1,5 @@
 .navbar-container{
+    background: none;
     position: sticky;
     top:0;
     z-index: 50;
@@ -6,7 +7,7 @@
     color: var(--textColor);
     align-items: center;
     padding: 0rem 1.5rem;
-    transition: all .2s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
 }
 
 #react-logo{
@@ -26,16 +27,25 @@
 
 
 .navbar-container.sticky{
+    background: linear-gradient(315deg,var(--nav-background),var(--nav-links));
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
     box-shadow: 0px 2px 0px 9px var(--nav-shadow), inset 0px -0.2px 0px var(--nav-border);
-
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .hide{
     display: none;
+}
+
+.navbar-right{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Keyframes */
