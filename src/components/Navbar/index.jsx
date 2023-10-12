@@ -12,7 +12,6 @@ const Navbar = () => {
   const setScreen = ()=>{
     if(navLinksRef.current!=null){
       if(window.innerWidth>600){
-        console.log(window.innerWidth)
         navLinksRef.current.classList.remove('hide')
       }
       else{
