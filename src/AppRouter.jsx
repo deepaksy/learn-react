@@ -16,6 +16,10 @@ import ErrorBoundary from './Pages/ErrorBoundary'
 import Renderprops from './Pages/RenderProps'
 import Context from './Pages/Context'
 import Http from './Pages/Http'
+import Hooks from './Pages/Hooks'
+import UseStates from './Pages/Hooks/UseStates'
+import UseEffects from './Pages/Hooks/UseEffects'
+import UseContext from './Pages/Hooks/UseContext'
 const AppRouter = () =>{
     return(
         <Router>
@@ -33,6 +37,12 @@ const AppRouter = () =>{
         <Route path='/render-props' element={<Renderprops/>}/>
         <Route path='/context' element={<Context/>}/>
         <Route path='/http' element={<Http/>}/>
+        <Route path='/hooks' >
+            <Route path='' element={<Hooks/>} />
+            <Route path='usestate' element={<UseStates/>} />
+            <Route path='useeffect' element={<UseEffects/>} />
+            <Route path='usecontext' element={<UseContext/>} />
+        </Route>
         </Routes>
         </Router>
     )
