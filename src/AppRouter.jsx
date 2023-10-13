@@ -15,6 +15,7 @@ import HOC from './Pages/HOC'
 import ErrorBoundary from './Pages/ErrorBoundary'
 import Renderprops from './Pages/RenderProps'
 import Context from './Pages/Context'
+import Http from './Pages/Http'
 const AppRouter = () =>{
     return(
         <Router>
@@ -31,6 +32,7 @@ const AppRouter = () =>{
         <Route path='/error-boundary' element={<ErrorBoundary/>}/>
         <Route path='/render-props' element={<Renderprops/>}/>
         <Route path='/context' element={<Context/>}/>
+        <Route path='/http' element={<Http/>}/>
         </Routes>
         </Router>
     )
