@@ -28,6 +28,7 @@ const JSX = () => {
     <h2>Without JSX</h2>
     <p>Below is the example for a element witout jsx.</p>
     <Code content={withoutjsx} />
+    <h1>Example:</h1>
     <WithoutJSX/>
     </section>
     <JSXContent/>
