@@ -20,6 +20,7 @@ import Hooks from './Pages/Hooks'
 import UseStates from './Pages/Hooks/UseStates'
 import UseEffects from './Pages/Hooks/UseEffects'
 import UseContext from './Pages/Hooks/UseContext'
+import UseReducers from './Pages/Hooks/UseReducers'
 const AppRouter = () =>{
     return(
         <Router>
@@ -42,6 +43,7 @@ const AppRouter = () =>{
             <Route path='usestate' element={<UseStates/>} />
             <Route path='useeffect' element={<UseEffects/>} />
             <Route path='usecontext' element={<UseContext/>} />
+            <Route path='usereducer' element={<UseReducers/>} />
         </Route>
         </Routes>
         </Router>
