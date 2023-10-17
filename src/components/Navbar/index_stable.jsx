@@ -46,21 +46,22 @@ const Navbar = () => {
   },[navRef])
 
   // handle side nav-state
-  // const handleSideNav = () =>{
-  //   if(sidebarRef!=null){
-  //     if(sidebarRef.current.classList.contains('show')){
-  //         sidebarRef.current.classList.remove('show');
-  //     }else{
-  //         sidebarRef.current.classList.add('show');
-  //     }
-  // }
-  const {isOpen,render,toggleSidebar} = SideBar()
+  const handleSideNav = () =>{
+    if(sidebarRef!=null){
+      if(sidebarRef.current.classList.contains('show')){
+          sidebarRef.current.classList.remove('show');
+      }else{
+          sidebarRef.current.classList.add('show');
+      }
+  }
+  }
 
   return (
+    
       <>
     <nav ref={navRef} className={`navbar-container`}>
         <div  className='navbar'>
-          <Button onclick={()=>toggleSidebar()} text={`click - ${isOpen?'':'close'}`} />
+          <Button onclick={()=>handleSideNav()} text={'click'} />
             <img id='react-logo' alt='react-logo' src={react_logo} width={70}/>
             {/**/}
             <div className='navbar-right'>
@@ -76,7 +77,7 @@ const Navbar = () => {
             </div>
         </div>
     </nav>
-    {render}
+    <SideBar ref={sidebarRef}></SideBar>
     </>
   )
 }
