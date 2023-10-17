@@ -11,7 +11,6 @@ const Test = () => {
     }
     useEffect(()=>{
         const closeSidebar = (e) =>{
-            // console.log(e.target.closest('.el')===null)
             if(isOpen && (e.target.closest('.el')===null || e.target.closest('.el.open')===null)){
                 setIsOpen(false)
             }

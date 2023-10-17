@@ -9,7 +9,6 @@ import Button from '../Button'
 const Navbar = () => {
   const navRef = useRef(null)
   const navLinksRef = useRef(null)
-  const sidebarRef = useRef()
   const {isDark,toggleTheme} = useTheme()
 
   const setScreen = ()=>{
@@ -45,22 +44,14 @@ const Navbar = () => {
     })
   },[navRef])
 
-  // handle side nav-state
-  // const handleSideNav = () =>{
-  //   if(sidebarRef!=null){
-  //     if(sidebarRef.current.classList.contains('show')){
-  //         sidebarRef.current.classList.remove('show');
-  //     }else{
-  //         sidebarRef.current.classList.add('show');
-  //     }
-  // }
-  const {isOpen,render,toggleSidebar} = SideBar()
+
+  const {render,toggleSidebar} = SideBar()
 
   return (
       <>
     <nav ref={navRef} className={`navbar-container`}>
         <div  className='navbar'>
-          <Button onclick={()=>toggleSidebar()} text={`click - ${isOpen?'':'close'}`} />
+          <Button onclick={()=>toggleSidebar()} text={`click`} />
             <img id='react-logo' alt='react-logo' src={react_logo} width={70}/>
             {/**/}
             <div className='navbar-right'>
