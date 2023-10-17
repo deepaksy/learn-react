@@ -1,0 +1,11 @@
+.el{
+    background-color: pink;
+    min-height: 7rem;
+    min-width: 3rem;
+    width: 10rem;
+    max-width: 50rem;
+}
+
+.el.open{
+    width: 20rem;
+}
