@@ -1,0 +1,35 @@
+.sidebar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: pink;
+    width: 0px;
+    visibility: hidden;
+    transition: width .2s,visibility .2s;
+}
+
+.contents{
+    display: block;
+}
+
+.sidebar.show{
+    display: block;
+    visibility: visible;
+    width: 50%;
+    /* transition: visibility 1s; */
+}
+
+.sidebar::before{
+    content: '';
+    display: block;
+    min-height: 5rem;
+}
+
+
+@media only screen and (max-width:600px){
+    .sidebar{
+        width: 0px;
+        transition: width .2s,visibility .2s;
+    }
+}
